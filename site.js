@@ -23,6 +23,17 @@
         (m.photo ? '<img class="avatar" alt="" loading="lazy">' : '<span class="avatar" aria-hidden="true"></span>') +
         '<span class="fiche-txt"><strong></strong><span></span></span>';
       if (m.photo) { li.querySelector(".avatar").src = m.photo; } else { li.querySelector(".avatar").textContent = initiales; }
+      // Photo LinkedIn en priorité, si elle existe dans img/linkedin/.
+      (function (li, m, initiales) {
+        var slug = m.nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "");
+        var test = new Image();
+        test.onload = function () {
+          var av = li.querySelector(".avatar");
+          if (av.tagName !== "IMG") { var img = document.createElement("img"); img.className = "avatar"; img.alt = ""; av.replaceWith(img); av = img; }
+          av.src = test.src;
+        };
+        test.src = "img/linkedin/" + slug + ".jpg";
+      })(li, m, initiales);
       li.querySelector("strong").textContent = m.nom;
       li.querySelector(".fiche-txt span").textContent = m.activite;
       if (m.linkedin) {
@@ -40,6 +51,13 @@
       : "";
     document.getElementById("fiches").hidden = false;
   }
+
+  // 2 bis. Citations : photo LinkedIn si disponible.
+  document.querySelectorAll(".q-av[data-slug]").forEach(function (box) {
+    var test = new Image();
+    test.onload = function () { box.innerHTML = ""; var img = document.createElement("img"); img.alt = ""; img.src = test.src; box.appendChild(img); };
+    test.src = "img/linkedin/" + box.dataset.slug + ".jpg";
+  });
 
   // 3. Apparition douce au défilement.
   var reduit = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
