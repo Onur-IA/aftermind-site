@@ -106,3 +106,37 @@
     document.querySelectorAll("[data-count]").forEach(function (el) { co.observe(el); });
   }
 })();
+
+// Diaporama de l'histoire et boutons « Copier ».
+(function () {
+  var story = document.getElementById("story");
+  if (story) {
+    var slides = story.querySelectorAll(".slide");
+    var dots = document.getElementById("story-dots");
+    slides.forEach(function () { dots.appendChild(document.createElement("i")); });
+    function majPoints() {
+      var w = slides[0].getBoundingClientRect().width + 20;
+      var i = Math.round(story.scrollLeft / w);
+      [].forEach.call(dots.children, function (d, k) { d.classList.toggle("on", k === i); });
+    }
+    story.addEventListener("scroll", function () { requestAnimationFrame(majPoints); });
+    majPoints();
+    document.querySelectorAll(".story-btn").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var w = slides[0].getBoundingClientRect().width + 20;
+        story.scrollBy({ left: w * +b.dataset.dir, behavior: "smooth" });
+      });
+    });
+    story.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") story.scrollBy({ left: 300 });
+      if (e.key === "ArrowLeft") story.scrollBy({ left: -300 });
+    });
+  }
+  document.querySelectorAll(".btn-copy").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var t = document.getElementById(b.dataset.target).textContent;
+      var fin = function () { var old = b.textContent; b.textContent = "Copié"; b.classList.add("done"); setTimeout(function () { b.textContent = old; b.classList.remove("done"); }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(fin, fin); else fin();
+    });
+  });
+})();

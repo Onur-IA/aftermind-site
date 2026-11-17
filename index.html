@@ -20,7 +20,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,400,0;0,9..144,600,0;1,9..144,400,0&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -43,21 +43,25 @@
   <main>
 
     <!-- Ouverture -->
-    <section class="hero-full">
-      <img class="hero-bg" src="img/notion/guiren.jpg" alt="Un dîner de l'Aftermind chez Guiren, janvier 2026" width="1600" height="1200">
-      <div class="hero-shade" aria-hidden="true"></div>
-      <div class="wrap hero-content">
-        <p class="eyebrow">Paris · depuis juin 2025 · sur invitation</p>
-        <h1>Un cercle privé d'entrepreneurs et de créateurs.</h1>
-        <p class="lead">On vient pour créer du lien, s'entraider et avancer ensemble. La confiance d'abord. Le business, s'il vient, vient après.</p>
-        <a class="next" href="#calendrier">
-          <span class="next-label">Le cercle revient · prochain dîner</span>
-          <span class="next-date">Jeudi 10 décembre 2026, 19&nbsp;h&nbsp;30</span>
-          <span class="next-note">Le lieu est donné aux membres dans le groupe.</span>
-        </a>
+    <section class="hero-v3">
+      <div class="wrap">
+        <div class="hero-v3-text reveal">
+          <p class="eyebrow">Paris · depuis juin 2025 · sur invitation</p>
+          <h1>Un cercle privé d'entrepreneurs et de créateurs.</h1>
+          <div class="hero-v3-row">
+            <p class="lead">On vient pour créer du lien, s'entraider et avancer ensemble. La confiance d'abord. Le business, s'il vient, vient après.</p>
+            <a class="next" href="#calendrier">
+              <span class="next-label">Le cercle revient · prochain dîner</span>
+              <span class="next-date">Jeudi 10 décembre 2026, 19&nbsp;h&nbsp;30</span>
+              <span class="next-note">Le lieu est donné aux membres dans le groupe.</span>
+            </a>
+          </div>
+        </div>
+        <figure class="hero-v3-photo reveal">
+          <img src="img/notion/guiren.jpg" alt="Un dîner de l'Aftermind chez Guiren, janvier 2026" width="1600" height="1200">
+          <figcaption>Chez Guiren, janvier 2026</figcaption>
+        </figure>
       </div>
-      <p class="hero-credit">Chez Guiren, janvier 2026</p>
-      <a class="hero-scroll" href="#histoire" aria-label="Descendre vers l'histoire"><span></span></a>
     </section>
 
     <!-- Chiffres -->
@@ -72,49 +76,56 @@
 
     <!-- Histoire -->
     <section id="histoire" class="block">
-      <div class="wrap two-col">
-        <div class="sticky-head reveal">
-          <p class="kicker">L'histoire</p>
-          <h2>Un test d'un mois, devenu un cercle.</h2>
-          <p class="muted">Quand on construit seul, on manque de gens à qui parler vraiment. L'Aftermind est né de ce constat.</p>
+      <div class="wrap">
+        <div class="story-head">
+          <div class="reveal">
+            <p class="kicker">L'histoire</p>
+            <h2>Un test d'un mois, devenu un cercle.</h2>
+          </div>
+          <div class="story-nav">
+            <button type="button" class="story-btn" data-dir="-1" aria-label="Précédent">‹</button>
+            <button type="button" class="story-btn" data-dir="1" aria-label="Suivant">›</button>
+          </div>
         </div>
-        <ol class="timeline">
-          <li class="reveal">
-            <span class="when">11 juin 2025</span>
-            <h3>Un message à 10 personnes</h3>
-            <p>« Un cercle restreint. 10 personnes. Une énergie unique. » Le cercle commence comme un test, pour un mois.</p>
-          </li>
-          <li class="reveal">
-            <span class="when">20 juin 2025</span>
-            <h3>La première soirée</h3>
-            <p>Un membre illusionniste ouvre son spectacle au groupe. On se rencontre enfin en vrai.</p>
-          </li>
-          <li class="reveal">
-            <span class="when">12 juillet 2025</span>
-            <h3>Le premier dîner</h3>
-            <p>Sept couverts, deux heures de table, et l'envie de recommencer.</p>
-          </li>
-          <li class="reveal">
-            <span class="when">Automne 2025</span>
-            <h3>L'entraide prend forme</h3>
-            <p>Un live chaque premier mercredi : on expose un blocage, le collectif répond. Un lieu de tournage trouvé en trente secondes, des mises en relation, des déclics.</p>
-          </li>
-          <li class="reveal">
-            <span class="when">12 mai 2026</span>
-            <h3>40 membres</h3>
-            <p>Des fondateurs, des auteurs, des coachs, des artistes. Chaque entrée se fait sur invitation.</p>
-          </li>
-          <li class="reveal">
-            <span class="when">24 juin 2026</span>
-            <h3>22 à table</h3>
-            <p>La plus grande soirée du cercle, pour un double anniversaire.</p>
-          </li>
-          <li class="reveal now">
-            <span class="when">10 décembre 2026</span>
-            <h3>Le retour</h3>
-            <p>Une règle simple : un dîner chaque deuxième jeudi du mois. La date est toujours connue à l'avance.</p>
-          </li>
-        </ol>
+        <div class="story" id="story" tabindex="0" aria-label="L'histoire du cercle, en diaporama">
+          <article class="slide">
+            <div class="slide-media"><div class="slide-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#clover"/></svg></div></div>
+            <div class="slide-body"><span class="when">11 juin 2025</span><h3>Un message à 10 personnes</h3><p>«&nbsp;Un cercle restreint. 10 personnes. Une énergie unique.&nbsp;» Le cercle commence comme un test, pour un mois.</p></div>
+          </article>
+          <article class="slide">
+            <div class="slide-media"><img src="img/soirees/premiere-soiree-juin-2025.jpg" alt="" loading="lazy"></div>
+            <div class="slide-body"><span class="when">20 juin 2025</span><h3>La première soirée</h3><p>Un membre illusionniste ouvre son spectacle au groupe. On se rencontre enfin en vrai.</p></div>
+          </article>
+          <article class="slide">
+            <div class="slide-media"><img src="img/soirees/diner-juillet-2025.jpg" alt="" loading="lazy"></div>
+            <div class="slide-body"><span class="when">12 juillet 2025</span><h3>Le premier dîner</h3><p>Sept couverts, deux heures de table, et l'envie de recommencer.</p></div>
+          </article>
+          <article class="slide">
+            <div class="slide-media"><img src="img/soirees/tablee-septembre-2025.jpg" alt="" loading="lazy"></div>
+            <div class="slide-body"><span class="when">Septembre 2025</span><h3>Les tablées s'allongent</h3><p>Neuf, puis dix convives. Les tables sont composées pour que les bonnes personnes se rencontrent.</p></div>
+          </article>
+          <article class="slide">
+            <div class="slide-media"><img src="img/soirees/diner-octobre-2025.jpg" alt="" loading="lazy"></div>
+            <div class="slide-body"><span class="when">Automne 2025</span><h3>L'entraide prend forme</h3><p>Un live chaque premier mercredi. Un lieu de tournage trouvé en trente secondes, des intros, des déclics.</p></div>
+          </article>
+          <article class="slide">
+            <div class="slide-media"><img src="img/notion/guiren.jpg" alt="" loading="lazy"></div>
+            <div class="slide-body"><span class="when">15 janvier 2026</span><h3>Un invité surprise</h3><p>Chez Guiren, le cofondateur de BonneGueule rejoint la table.</p></div>
+          </article>
+          <article class="slide">
+            <div class="slide-media"><div class="slide-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#clover"/></svg></div></div>
+            <div class="slide-body"><span class="when">12 mai 2026</span><h3>40 membres</h3><p>Des fondateurs, des auteurs, des coachs, des artistes. Chaque entrée se fait sur invitation.</p></div>
+          </article>
+          <article class="slide">
+            <div class="slide-media"><img src="img/soirees/terrasse-septembre-2026.jpg" alt="" loading="lazy"></div>
+            <div class="slide-body"><span class="when">Septembre 2026</span><h3>Le spontané</h3><p>Un apéro lancé par une membre, un verre en terrasse. Le cercle vit aussi sans calendrier.</p></div>
+          </article>
+          <article class="slide slide-now">
+            <div class="slide-media"><div class="slide-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#clover"/></svg></div></div>
+            <div class="slide-body"><span class="when">10 décembre 2026</span><h3>Le retour</h3><p>Une règle simple : un dîner chaque deuxième jeudi. La date est toujours connue à l'avance.</p></div>
+          </article>
+        </div>
+        <div class="story-dots" id="story-dots" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -124,15 +135,12 @@
         <p class="kicker reveal">Les soirées</p>
         <h2 class="reveal">Ce que ça donne, un jeudi soir.</h2>
         <div class="gallery">
-          <figure class="g-wide reveal"><img src="img/soirees/apero-septembre-2026.jpg" alt="Un apéro entre membres, septembre 2026" loading="lazy"></figure>
-          <figure class="g-tall reveal"><img src="img/assiettes.jpg" alt="Des assiettes et des verres sur une table sombre" loading="lazy"></figure>
-          <figure class="reveal"><img src="img/soirees/soiree-septembre-2025.jpg" alt="Des membres réunis autour d'une table, septembre 2025" loading="lazy"></figure>
-          <figure class="reveal"><img src="img/soirees/diner-octobre-2025.jpg" alt="Un dîner du cercle, octobre 2025" loading="lazy"></figure>
+          <figure class="g-wide g-tall reveal"><img src="img/soirees/soiree-septembre-2025.jpg" alt="Une soirée du cercle, septembre 2025" loading="lazy"></figure>
+          <figure class="g-tall reveal"><img src="img/assiettes.jpg" alt="Des assiettes sur une table sombre" loading="lazy"></figure>
+          <figure class="reveal"><img src="img/soirees/apero-septembre-2026.jpg" alt="Un apéro entre membres, septembre 2026" loading="lazy"></figure>
           <figure class="g-tall reveal"><img src="img/salle-cafe.jpg" alt="Une salle de café parisien aux moulures dorées" loading="lazy"></figure>
-          <figure class="reveal"><img src="img/soirees/premiere-soiree-juin-2025.jpg" alt="La première soirée du cercle, juin 2025" loading="lazy"></figure>
-          <figure class="g-wide reveal"><img src="img/soirees/terrasse-septembre-2026.jpg" alt="Des membres en terrasse, septembre 2026" loading="lazy"></figure>
-          <figure class="g-tall reveal"><img src="img/soirees/diner-juillet-2025.jpg" alt="Le premier dîner, juillet 2025" loading="lazy"></figure>
         </div>
+        <p class="aside reveal">Plus de photos à venir après le dîner du 10 décembre.</p>
       </div>
     </section>
 
@@ -219,18 +227,53 @@ Délai : …</pre>
       </div>
     </section>
 
+    <!-- Outils -->
+    <section class="block tools-block alt" aria-label="La boîte à outils du membre">
+      <div class="wrap">
+        <p class="kicker reveal">La boîte à outils du membre</p>
+        <h2 class="reveal">Trois gestes pour faire vivre le cercle.</h2>
+        <div class="tools">
+          <article class="tool reveal">
+            <h3>Demander de l'aide</h3>
+            <p>Copie, complète, colle dans le groupe.</p>
+            <pre class="tpl" id="tpl-aide">Appel Aftermind
+Je cherche : …
+Pour : …
+Délai : …</pre>
+            <button type="button" class="btn-copy" data-target="tpl-aide">Copier le modèle</button>
+          </article>
+          <article class="tool reveal">
+            <h3>Proposer un format</h3>
+            <p>Un coworking, un sport, une sortie : tu le portes, le cercle relaie.</p>
+            <pre class="tpl" id="tpl-format">Idée Aftermind
+Quoi : …
+Quand : …
+Où : …
+Places : …</pre>
+            <button type="button" class="btn-copy" data-target="tpl-format">Copier le modèle</button>
+          </article>
+          <article class="tool reveal">
+            <h3>Ne rater aucun dîner</h3>
+            <p>Le deuxième jeudi de chaque mois, à 19&nbsp;h&nbsp;30, ajouté d'un clic à ton agenda.</p>
+            <a class="btn-cal" href="aftermind-diners.ics" download>Ajouter à mon agenda</a>
+            <p class="tool-note">Tu veux présenter quelqu'un ? Écris à Onur, il décide de l'invitation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Citations -->
     <section class="block quotes-block" aria-label="Ce que les membres en disent">
       <div class="wrap">
         <p class="kicker reveal">Dans le groupe, le lendemain</p>
         <div class="quotes">
-          <blockquote class="q-big reveal"><p>« De l'authentique, du brut, du bon. On a ri, on a parlé vrai. »</p><footer><span class="q-av" data-slug="rosalie-bun-ung"><img src="img/membres/rosalie-bun-ung.jpg" alt="" loading="lazy"></span><span><strong>Rosalie Bun-Ung</strong><cite>Coach business et mindset · après la première soirée, juin 2025</cite></span></footer></blockquote>
-          <blockquote class="reveal"><p>« Il y a de la magie à se retrouver. On s'apprend. »</p><footer><span class="q-av" data-slug="jean-sommer"><img src="img/membres/jean-sommer.jpg" alt="" loading="lazy"></span><span><strong>Jean Sommer</strong><cite>Coach vocal, auteur · octobre 2025</cite></span></footer></blockquote>
-          <blockquote class="reveal"><p>« Une belle dream team de singularité pétillante. »</p><footer><span class="q-av" data-slug="cyril-bechacq"><img src="img/membres/cyril-bechacq.jpg" alt="" loading="lazy"></span><span><strong>Cyril Béchacq</strong><cite>Thérapeute manuel · juin 2025</cite></span></footer></blockquote>
-          <blockquote class="reveal"><p>« Génial de se retrouver dans un contexte qui incarne si bien le pouvoir des pairs qui grandissent ensemble. »</p><footer><span class="q-av" data-slug="diane-lenne"><img src="img/membres/diane-lenne.jpg" alt="" loading="lazy"></span><span><strong>Diane Lenne</strong><cite>CEO de We Are Peers · octobre 2025</cite></span></footer></blockquote>
-          <blockquote class="reveal"><p>« De bonnes vibes, du bon jus de crâne. What else ? »</p><footer><span class="q-av" data-slug="gwladys-ramette"><img src="img/membres/gwladys-ramette.jpg" alt="" loading="lazy"></span><span><strong>Gwladys Ramette</strong><cite>Coach carrière · septembre 2025</cite></span></footer></blockquote>
-          <blockquote class="reveal"><p>« Ravi à l'idée de revoir des têtes connues et d'en découvrir de nouvelles. »</p><footer><span class="q-av" data-slug="alain-bosetti"><span>AB</span></span><span><strong>Alain Bosetti</strong><cite>Président d'En Personne · décembre 2025</cite></span></footer></blockquote>
-          <blockquote class="reveal"><p>« Une belle première soirée. Bravo pour l'initiative. »</p><footer><span class="q-av" data-slug="rodolphe-gagetta"><span>RG</span></span><span><strong>Rodolphe Gagetta</strong><cite>Directeur de production · juin 2025</cite></span></footer></blockquote>
+          <blockquote class="q-big reveal"><p>«&nbsp;De l'authentique, du brut, du bon. On a ri, on a parlé vrai.&nbsp;»</p><footer><span class="q-av" data-slug="rosalie-bun-ung"><img src="img/membres/rosalie-bun-ung.jpg" alt="" loading="lazy"></span><span><strong>Rosalie Bun-Ung</strong><cite>Coach business et mindset · après la première soirée, juin 2025</cite></span></footer></blockquote>
+          <blockquote class="reveal"><p>«&nbsp;Il y a de la magie à se retrouver. On s'apprend.&nbsp;»</p><footer><span class="q-av" data-slug="jean-sommer"><img src="img/membres/jean-sommer.jpg" alt="" loading="lazy"></span><span><strong>Jean Sommer</strong><cite>Coach vocal, auteur · octobre 2025</cite></span></footer></blockquote>
+          <blockquote class="reveal"><p>«&nbsp;Une belle dream team de singularité pétillante.&nbsp;»</p><footer><span class="q-av" data-slug="cyril-bechacq"><img src="img/membres/cyril-bechacq.jpg" alt="" loading="lazy"></span><span><strong>Cyril Béchacq</strong><cite>Thérapeute manuel · juin 2025</cite></span></footer></blockquote>
+          <blockquote class="reveal"><p>«&nbsp;Génial de se retrouver dans un contexte qui incarne si bien le pouvoir des pairs qui grandissent ensemble.&nbsp;»</p><footer><span class="q-av" data-slug="diane-lenne"><img src="img/membres/diane-lenne.jpg" alt="" loading="lazy"></span><span><strong>Diane Lenne</strong><cite>CEO de We Are Peers · octobre 2025</cite></span></footer></blockquote>
+          <blockquote class="reveal"><p>«&nbsp;De bonnes vibes, du bon jus de crâne. What else ?&nbsp;»</p><footer><span class="q-av" data-slug="gwladys-ramette"><img src="img/membres/gwladys-ramette.jpg" alt="" loading="lazy"></span><span><strong>Gwladys Ramette</strong><cite>Coach carrière · septembre 2025</cite></span></footer></blockquote>
+          <blockquote class="reveal"><p>«&nbsp;Ravi à l'idée de revoir des têtes connues et d'en découvrir de nouvelles.&nbsp;»</p><footer><span class="q-av" data-slug="alain-bosetti"><span>AB</span></span><span><strong>Alain Bosetti</strong><cite>Président d'En Personne · décembre 2025</cite></span></footer></blockquote>
+          <blockquote class="reveal"><p>«&nbsp;Une belle première soirée. Bravo pour l'initiative.&nbsp;»</p><footer><span class="q-av" data-slug="rodolphe-gagetta"><span>RG</span></span><span><strong>Rodolphe Gagetta</strong><cite>Directeur de production · juin 2025</cite></span></footer></blockquote>
         </div>
       </div>
     </section>
@@ -373,8 +416,8 @@ Délai : …</pre>
         <div class="reveal">
           <p class="kicker">Le mot de l'hôte</p>
           <blockquote class="host-quote">
-            <p>« J'ai lancé l'Aftermind en juin 2025 avec un message à dix personnes. Je construisais seul, et il me manquait une table où l'on parle vrai.</p>
-            <p>Mon rôle est simple : donner une date, composer les tables, tenir le cadre. Le tien l'est aussi : venir, et oser demander. »</p>
+            <p>«&nbsp;J'ai lancé l'Aftermind en juin 2025 avec un message à dix personnes. Je construisais seul, et il me manquait une table où l'on parle vrai.</p>
+            <p>Mon rôle est simple : donner une date, composer les tables, tenir le cadre. Le tien l'est aussi : venir, et oser demander.&nbsp;»</p>
           </blockquote>
           <p class="host-sign">Onur Karapinar <span>· fondateur et hôte</span></p>
         </div>
