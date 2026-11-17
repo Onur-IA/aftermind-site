@@ -349,3 +349,19 @@ img.avatar { object-fit: cover; padding: 0; }
 .wins p { margin: 0; color: var(--ink-soft); }
 @media (max-width: 900px) { .wins { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .wins { grid-template-columns: 1fr; } }
+
+/* Ouverture : photo de Guiren en paysage */
+.hero-grid { grid-template-columns: 0.9fr 1.25fr; gap: 48px; }
+.hero-photo img { aspect-ratio: 4 / 3; object-position: center 60%; border-radius: 160px 160px var(--radius) var(--radius); }
+@media (max-width: 900px) { .hero-photo img { aspect-ratio: 4 / 3; border-radius: 100px 100px var(--radius) var(--radius); } }
+.hero-grid > * { min-width: 0; }
+
+/* Ouverture v2 : texte puis grande photo panoramique */
+.hero { padding: 72px 0 56px; }
+.hero-grid { grid-template-columns: 1fr; gap: 40px; }
+.hero-text { max-width: 760px; }
+.hero h1 { max-width: 18ch; }
+.hero-photo img { aspect-ratio: 16 / 8; object-position: center 55%; border-radius: 28px; }
+.hero-photo figcaption { left: 24px; bottom: 24px; }
+@media (max-width: 900px) { .hero-photo img { aspect-ratio: 4 / 3; border-radius: 20px; } }
+@media (max-width: 640px) { .hero { padding: 40px 0 48px; } .hero-photo figcaption { left: 12px; bottom: 12px; font-size: 0.9rem; } }
