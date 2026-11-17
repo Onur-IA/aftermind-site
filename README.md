@@ -7,7 +7,7 @@ HTML et CSS simples, sans outil de construction : `index.html`, `style.css`, `fa
 ## Voir la maquette sur ton ordinateur
 
 ```bash
-python3 -m http.server 4321
+node serve.mjs
 ```
 
 Puis ouvre http://localhost:4321.

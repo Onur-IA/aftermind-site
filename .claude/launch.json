@@ -1,11 +1,6 @@
 {
   "version": "0.0.1",
   "configurations": [
-    {
-      "name": "aftermind",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4321", "--directory", "/Users/onurkarapinar/Documents/Workspace/aftermind-site"],
-      "port": 4321
-    }
+    { "name": "aftermind", "runtimeExecutable": "node", "runtimeArgs": ["serve.mjs"], "port": 4321 }
   ]
 }
