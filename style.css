@@ -327,3 +327,13 @@ img.avatar { object-fit: cover; padding: 0; }
 }
 .faces img:hover { transform: scale(1.35); z-index: 2; }
 @media (max-width: 640px) { .faces img { width: 54px; height: 54px; margin: -4px; } }
+
+/* Portraits plus visibles */
+.fiche { grid-template-columns: 64px 1fr; gap: 4px 16px; padding: 16px; }
+.avatar { width: 64px; height: 64px; }
+.q-av { width: 52px; height: 52px; }
+.quotes .q-big .q-av { width: 72px; height: 72px; }
+@media (max-width: 640px) {
+  .fiche { grid-template-columns: 1fr; }
+  .avatar { width: 72px; height: 72px; }
+}
