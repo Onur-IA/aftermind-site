@@ -140,3 +140,30 @@
     });
   });
 })();
+
+// Recherche et filtres des membres.
+(function () {
+  var q = document.getElementById("finder-q"), chips = document.querySelectorAll(".chip");
+  if (!q) return;
+  var filtre = "";
+  var norm = function (t) { return t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
+  var compte = document.createElement("p"); compte.className = "fiches-count";
+  var grid = document.getElementById("fiches-grid"); grid.parentNode.insertBefore(compte, grid);
+  function appliquer() {
+    var t = norm(q.value.trim()), re = filtre ? new RegExp(norm(filtre)) : null, n = 0;
+    grid.querySelectorAll(".fiche").forEach(function (f) {
+      var txt = norm(f.textContent);
+      var ok = (!t || txt.indexOf(t) > -1) && (!re || re.test(txt));
+      f.classList.toggle("hide", !ok); if (ok) n++;
+    });
+    compte.textContent = n + (n > 1 ? " membres" : " membre");
+  }
+  q.addEventListener("input", appliquer);
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      chips.forEach(function (x) { x.classList.remove("on"); }); c.classList.add("on");
+      filtre = c.dataset.f; appliquer();
+    });
+  });
+  appliquer();
+})();
