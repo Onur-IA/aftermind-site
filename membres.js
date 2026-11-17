@@ -2,6 +2,7 @@
 // Publication validée par Onur le 17/11/2026 (accord: true pour tous).
 // Pour retirer quelqu'un du site : passer son accord à false.
 window.MEMBRES = [
+  { nom: "Onur Karapinar", activite: "Fondateur et hôte du cercle, auteur", linkedin: "https://www.linkedin.com/in/onurkarapinar/", accord: true },
   { nom: "Alain Bosetti", activite: "Président du groupe En Personne et du Salon SME", linkedin: "https://www.linkedin.com/in/alain-bosetti-1360032/", accord: true },
   { nom: "Alexandre Huang", activite: "Fondateur du Studio Interview Conseil, storytelling et branding", linkedin: "https://www.linkedin.com/in/huangalexandre", accord: true, photo: "img/membres/alexandre-huang.jpg" },
   { nom: "Alexandre Lacharme", activite: "Auteur, business angel, chroniqueur Sud Radio", linkedin: "https://www.linkedin.com/in/alexlacharme/", accord: true },

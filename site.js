@@ -52,6 +52,19 @@
     document.getElementById("fiches").hidden = false;
   }
 
+  // 2 ter. Mur de visages.
+  var mur = document.getElementById("faces");
+  if (mur && membres.length) {
+    membres.filter(function (m) { return m.accord; }).forEach(function (m, i) {
+      var slug = m.nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "");
+      var img = document.createElement("img");
+      img.src = "img/linkedin/" + slug + ".jpg"; img.alt = m.nom; img.title = m.nom; img.loading = "lazy";
+      img.style.animationDelay = (i * 40) + "ms";
+      img.onerror = function () { img.remove(); };
+      mur.appendChild(img);
+    });
+  }
+
   // 2 bis. Citations : photo LinkedIn si disponible.
   document.querySelectorAll(".q-av[data-slug]").forEach(function (box) {
     var test = new Image();
