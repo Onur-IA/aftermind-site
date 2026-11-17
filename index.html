@@ -4,16 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aftermind | Cercle privé d'entrepreneurs et de créateurs</title>
-  <meta name="description" content="Aftermind est un cercle privé d'entrepreneurs et de créateurs, à Paris. Un dîner par mois, des formats portés par les membres, de l'entraide. L'entrée se fait sur invitation.">
+  <meta name="description" content="Aftermind est un cercle privé d'une quarantaine d'entrepreneurs et de créateurs, à Paris. Un dîner chaque deuxième jeudi, des formats portés par les membres, de l'entraide. L'entrée se fait sur invitation.">
   <!-- Maquette : à retirer le jour de la mise en ligne publique -->
   <meta name="robots" content="noindex, nofollow">
-  <meta property="og:title" content="Aftermind">
-  <meta property="og:description" content="Un cercle privé d'entrepreneurs et de créateurs. On vient pour créer du lien, s'entraider et avancer ensemble.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aftermind.fr/">
+  <meta property="og:title" content="Aftermind, le cercle revient">
+  <meta property="og:description" content="Un dîner chaque deuxième jeudi. Le prochain : jeudi 10 décembre 2026.">
+  <meta property="og:image" content="https://aftermind.fr/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#14302A">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,53 +32,123 @@
         <span>Aftermind</span>
       </a>
       <nav aria-label="Sections">
-        <a href="#cercle">Le cercle</a>
+        <a href="#histoire">L'histoire</a>
         <a href="#formats">Les formats</a>
+        <a href="#membres">Les membres</a>
         <a href="#regles">Les règles</a>
-        <a href="#rejoindre">Rejoindre</a>
       </nav>
     </div>
   </header>
 
   <main>
 
+    <!-- Ouverture -->
     <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">Paris · depuis juin 2025 · sur invitation</p>
-        <h1>Un cercle privé d'entrepreneurs et de créateurs.</h1>
-        <p class="lead">On vient pour créer du lien, s'entraider et avancer ensemble.</p>
-        <div class="next">
-          <span class="next-label">Prochain dîner</span>
-          <span class="next-date">Jeudi 10 décembre 2026</span>
-          <span class="next-note">Le lieu est donné aux membres dans le groupe.</span>
+      <div class="wrap hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Paris · depuis juin 2025 · sur invitation</p>
+          <h1>Un cercle privé d'entrepreneurs et de créateurs.</h1>
+          <p class="lead">On vient pour créer du lien, s'entraider et avancer ensemble. La confiance d'abord. Le business, s'il vient, vient après.</p>
+          <a class="next" href="#calendrier">
+            <span class="next-label">Le cercle revient · prochain dîner</span>
+            <span class="next-date">Jeudi 10 décembre 2026, 19&nbsp;h&nbsp;30</span>
+            <span class="next-note">Le lieu est donné aux membres dans le groupe.</span>
+          </a>
         </div>
+        <figure class="hero-photo reveal">
+          <img src="img/table-shinko.jpg" alt="Une longue table dressée dans un restaurant aux lumières tamisées" width="1280" height="720">
+          <figcaption>La table est mise.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="cercle" class="block">
+    <!-- Chiffres -->
+    <section class="stats" aria-label="Le cercle en chiffres">
+      <div class="wrap stats-grid">
+        <div class="stat reveal"><span class="stat-num" data-count="40">40</span><span class="stat-label">membres</span></div>
+        <div class="stat reveal"><span class="stat-num" data-count="16">16</span><span class="stat-label">dîners depuis juillet 2025</span></div>
+        <div class="stat reveal"><span class="stat-num" data-count="22">22</span><span class="stat-label">autour de la table, le 24 juin 2026</span></div>
+        <div class="stat reveal"><span class="stat-num">0</span><span class="stat-label">pitch</span></div>
+      </div>
+    </section>
+
+    <!-- Histoire -->
+    <section id="histoire" class="block">
       <div class="wrap two-col">
-        <div>
-          <p class="kicker">Le cercle</p>
-          <h2>La confiance d'abord. Le business, s'il vient, vient après.</h2>
+        <div class="sticky-head reveal">
+          <p class="kicker">L'histoire</p>
+          <h2>Un test d'un mois, devenu un cercle.</h2>
+          <p class="muted">Quand on construit seul, on manque de gens à qui parler vraiment. L'Aftermind est né de ce constat.</p>
         </div>
-        <div class="prose">
-          <p>Aftermind réunit une quarantaine d'entrepreneurs, de dirigeants et de créateurs. Le cercle est né d'un constat simple : quand on construit seul, on manque de gens à qui parler vraiment.</p>
-          <p>Ici, on se retrouve autour d'une table, on partage ce qui bloque et on s'aide quand on peut. Le cercle est gratuit. Chacun règle son repas, et c'est tout.</p>
-          <p>Aftermind est animé par Onur Karapinar. Il garantit le cadre, la qualité des échanges et la cohérence du cercle.</p>
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="when">11 juin 2025</span>
+            <h3>Un message à 10 personnes</h3>
+            <p>« Un cercle restreint. 10 personnes. Une énergie unique. » Le cercle commence comme un test, pour un mois.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">20 juin 2025</span>
+            <h3>La première soirée</h3>
+            <p>Un membre illusionniste ouvre son spectacle au groupe. On se rencontre enfin en vrai.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">12 juillet 2025</span>
+            <h3>Le premier dîner</h3>
+            <p>Sept couverts, deux heures de table, et l'envie de recommencer.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">Automne 2025</span>
+            <h3>L'entraide prend forme</h3>
+            <p>Un live chaque premier mercredi : on expose un blocage, le collectif répond. Un lieu de tournage trouvé en trente secondes, des mises en relation, des déclics.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">12 mai 2026</span>
+            <h3>40 membres</h3>
+            <p>Des fondateurs, des auteurs, des coachs, des artistes. Chaque entrée se fait sur invitation.</p>
+          </li>
+          <li class="reveal">
+            <span class="when">24 juin 2026</span>
+            <h3>22 à table</h3>
+            <p>La plus grande soirée du cercle, pour un double anniversaire.</p>
+          </li>
+          <li class="reveal now">
+            <span class="when">10 décembre 2026</span>
+            <h3>Le retour</h3>
+            <p>Une règle simple : un dîner chaque deuxième jeudi du mois. La date est toujours connue à l'avance.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Soirées -->
+    <section class="block gallery-block alt" aria-label="Les soirées en images">
+      <div class="wrap">
+        <p class="kicker reveal">Les soirées</p>
+        <h2 class="reveal">Ce que ça donne, un jeudi soir.</h2>
+        <div class="gallery">
+          <figure class="g-wide reveal" data-prive><img src="img/prive/tablee-septembre-2025.jpg" alt="Une grande tablée de membres, septembre 2025" loading="lazy"></figure>
+          <figure class="g-tall reveal"><img src="img/assiettes.jpg" alt="Des assiettes et des verres sur une table sombre" loading="lazy"></figure>
+          <figure class="reveal" data-prive><img src="img/prive/soiree-septembre-2025.jpg" alt="Des membres réunis autour d'une table, septembre 2025" loading="lazy"></figure>
+          <figure class="reveal" data-prive><img src="img/prive/diner-octobre-2025.jpg" alt="Un dîner du cercle, octobre 2025" loading="lazy"></figure>
+          <figure class="g-tall reveal"><img src="img/salle-cafe.jpg" alt="Une salle de café parisien aux moulures dorées" loading="lazy"></figure>
+          <figure class="reveal" data-prive><img src="img/prive/premiere-soiree-juin-2025.jpg" alt="La première soirée du cercle, juin 2025" loading="lazy"></figure>
+          <figure class="g-wide reveal" data-prive><img src="img/prive/terrasse-septembre-2026.jpg" alt="Des membres en terrasse, septembre 2026" loading="lazy"></figure>
+          <figure class="reveal"><img src="img/salle-shinko.jpg" alt="Une salle de restaurant aux tables noires" loading="lazy"></figure>
         </div>
       </div>
     </section>
 
-    <section id="formats" class="block alt">
+    <!-- Formats -->
+    <section id="formats" class="block">
       <div class="wrap">
-        <p class="kicker">Les formats</p>
-        <h2>Trois façons de se retrouver.</h2>
+        <p class="kicker reveal">Les formats</p>
+        <h2 class="reveal">Trois façons de se retrouver.</h2>
 
         <div class="cards">
-          <article class="card">
+          <article class="card reveal">
             <span class="num">1</span>
             <h3>Le dîner du deuxième jeudi</h3>
-            <p>Un dîner par mois, le deuxième jeudi, à 19 h 30. La date est donnée à l'avance, sans sondage : les premiers qui répondent ont leur place.</p>
+            <p>Un dîner par mois, le deuxième jeudi, à 19&nbsp;h&nbsp;30. La date est donnée à l'avance, sans sondage : les premiers qui répondent ont leur place.</p>
             <ul>
               <li>6 à 8 personnes par table</li>
               <li>Des tables composées pour que les bonnes personnes se rencontrent</li>
@@ -79,7 +156,7 @@
             </ul>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <span class="num">2</span>
             <h3>Les formats portés par les membres</h3>
             <p>Un membre a une idée, il la porte. Le cercle relaie.</p>
@@ -90,7 +167,7 @@
             </ul>
           </article>
 
-          <article class="card">
+          <article class="card reveal">
             <span class="num">3</span>
             <h3>L'entraide</h3>
             <p>Une décision à prendre, un blocage, une mise en relation ? Tu poses ta demande dans le groupe. Chacun répond s'il le souhaite.</p>
@@ -101,50 +178,107 @@ Délai : …</pre>
           </article>
         </div>
 
-        <p class="aside">Les lives du premier mercredi sont en pause. Ils reprendront dès que trois membres le demanderont.</p>
+        <div id="calendrier" class="calendar reveal">
+          <div class="calendar-head">
+            <p class="kicker">Les prochains dîners</p>
+            <p class="muted">Toujours le deuxième jeudi, à 19&nbsp;h&nbsp;30.</p>
+          </div>
+          <ol class="dates">
+            <li class="is-next"><span class="d-day">10</span><span class="d-month">déc. 2026</span><span class="d-tag">Le retour</span></li>
+            <li><span class="d-day">14</span><span class="d-month">janv. 2027</span></li>
+            <li><span class="d-day">11</span><span class="d-month">févr. 2027</span></li>
+            <li><span class="d-day">11</span><span class="d-month">mars 2027</span></li>
+          </ol>
+        </div>
+
+        <p class="aside reveal">Les lives du premier mercredi sont en pause. Ils reprendront dès que trois membres le demanderont.</p>
       </div>
     </section>
 
+    <!-- Citations -->
+    <section class="block quotes-block" aria-label="Ce que les membres en disent">
+      <div class="wrap">
+        <p class="kicker reveal">Dans le groupe, le lendemain</p>
+        <div class="quotes">
+          <blockquote class="q-big reveal"><p>« De l'authentique, du brut, du bon. On a ri, on a parlé vrai. »</p><cite>Après la première soirée, juin 2025</cite></blockquote>
+          <blockquote class="reveal"><p>« Il y a de la magie à se retrouver. On s'apprend. »</p><cite>Octobre 2025</cite></blockquote>
+          <blockquote class="reveal"><p>« Une belle dream team de singularité pétillante. »</p><cite>Juin 2025</cite></blockquote>
+          <blockquote class="reveal"><p>« Le pouvoir des pairs qui grandissent ensemble. »</p><cite>Octobre 2025</cite></blockquote>
+          <blockquote class="reveal"><p>« De bonnes vibes, du bon jus de crâne. What else ? »</p><cite>Septembre 2025</cite></blockquote>
+          <blockquote class="reveal"><p>« Une soirée, c'est trop court ! »</p><cite>Octobre 2025</cite></blockquote>
+          <blockquote class="reveal"><p>« Entremetteur de styles. »</p><cite>À propos de l'hôte, décembre 2025</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membres -->
+    <section id="membres" class="block alt">
+      <div class="wrap">
+        <p class="kicker reveal">Les membres</p>
+        <h2 class="reveal">Une quarantaine de parcours qui ne se ressemblent pas.</h2>
+        <p class="muted reveal measure">Des fondateurs, des auteurs, des coachs, des artistes. Ce qui les réunit : l'envie de construire, et de ne pas le faire seul.</p>
+
+        <ul class="mosaic reveal" aria-label="Quelques métiers du cercle">
+          <li>Illusionniste</li><li>Business angel</li><li>Éditrice</li><li>Thérapeute de couple</li>
+          <li>Chroniqueur radio</li><li>Podcasteur sportif</li><li>Coach vocal</li><li>CTO indépendant</li>
+          <li>Experte du repas d'affaires</li><li>Photographe 3D</li><li>Profiler comportementale</li>
+          <li>Prof de yoga</li><li>Ex-athlète d'arts martiaux</li><li>Ancien rugbyman</li>
+          <li>Directeur de création</li><li>Experte en finance</li><li>Conférencier philosophe</li>
+          <li>Coach carrière</li><li>Créateur de jeux urbains</li><li>Stratège de marque</li>
+          <li>Experte en pédagogie</li><li>Expert en prospection</li><li>Thérapeute manuel</li>
+          <li>Coach en neurosciences</li><li>Directeur de production</li><li>Experte de la retraite des dirigeants</li>
+        </ul>
+
+        <div id="fiches" class="fiches" hidden>
+          <p class="fiches-note" id="fiches-note"></p>
+          <ul class="fiches-grid" id="fiches-grid"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Règles -->
     <section id="regles" class="block">
       <div class="wrap">
-        <p class="kicker">Les règles</p>
-        <h2>Quatre règles, et un espace qui se protège.</h2>
+        <p class="kicker reveal">Les règles</p>
+        <h2 class="reveal">Quatre règles, et un espace qui se protège.</h2>
         <ol class="rules">
-          <li>
-            <h3>Confidentialité absolue</h3>
-            <p>Ce qui se dit ici reste ici.</p>
-          </li>
-          <li>
-            <h3>Pas de pitch</h3>
-            <p>Aucune démarche commerciale. Les relations business naissent d'elles-mêmes, quand c'est pertinent.</p>
-          </li>
-          <li>
-            <h3>Le respect du temps et de la parole</h3>
-            <p>On écoute autant qu'on parle.</p>
-          </li>
-          <li>
-            <h3>L'entraide est volontaire</h3>
-            <p>Personne n'est obligé d'aider ni de répondre.</p>
-          </li>
+          <li class="reveal"><h3>Confidentialité absolue</h3><p>Ce qui se dit ici reste ici.</p></li>
+          <li class="reveal"><h3>Pas de pitch</h3><p>Aucune démarche commerciale. Les relations business naissent d'elles-mêmes, quand c'est pertinent.</p></li>
+          <li class="reveal"><h3>Le respect du temps et de la parole</h3><p>On écoute autant qu'on parle.</p></li>
+          <li class="reveal"><h3>L'entraide est volontaire</h3><p>Personne n'est obligé d'aider ni de répondre.</p></li>
         </ol>
       </div>
     </section>
 
+    <!-- Bibliothèque -->
     <section id="bibliotheque" class="block alt">
-      <div class="wrap two-col">
-        <div>
-          <p class="kicker">La bibliothèque</p>
-          <h2>Les livres que les membres recommandent.</h2>
-        </div>
-        <div class="prose">
-          <p>Chaque membre peut y ajouter le livre qui l'a fait avancer. La liste commence par un livre sur l'art de construire son réseau.</p>
-          <p class="todo">[Titre à confirmer]</p>
+      <div class="wrap">
+        <p class="kicker reveal">La bibliothèque</p>
+        <h2 class="reveal">Les livres du cercle.</h2>
+        <p class="muted reveal measure">Plusieurs membres ont écrit. On commence par deux livres qui parlent de ce qu'on fait ici : apprendre des autres, et tisser son réseau.</p>
+        <div class="books">
+          <article class="book reveal">
+            <img src="img/livre-apprendre-les-uns-des-autres.jpg" alt="Couverture du livre Apprendre les uns des autres" loading="lazy">
+            <div>
+              <h3>Apprendre les uns des autres</h3>
+              <p class="muted">Diane Lenne, Eyrolles. Partager ses connaissances entre pairs et faire grandir le collectif.</p>
+            </div>
+          </article>
+          <article class="book reveal">
+            <div class="book-cover" aria-hidden="true"><span>Réseau</span></div>
+            <div>
+              <h3><span class="todo">[Titre à confirmer]</span></h3>
+              <p class="muted">Alain Bosetti. L'art de construire et d'entretenir son réseau.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- Invitation -->
     <section id="rejoindre" class="block invite">
       <div class="wrap narrow">
+        <svg class="clover big" viewBox="0 0 32 32" aria-hidden="true"><use href="#clover"/></svg>
         <p class="kicker">Rejoindre</p>
         <h2>L'entrée se fait sur invitation.</h2>
         <p>Aftermind reste petit pour rester vrai. Il n'y a ni formulaire, ni liste d'attente, ni abonnement.</p>
@@ -152,6 +286,7 @@ Délai : …</pre>
       </div>
     </section>
 
+    <!-- Questions -->
     <section class="block faq">
       <div class="wrap narrow">
         <p class="kicker">Questions fréquentes</p>
@@ -198,5 +333,9 @@ Délai : …</pre>
       <path d="M16 15 Q18 24 24 29" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </symbol>
   </svg>
+
+  <!-- Fiches des membres : fichier privé, absent en ligne tant qu'il n'est pas filtré -->
+  <script src="membres.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>
