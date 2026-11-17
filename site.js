@@ -20,9 +20,9 @@
       var li = document.createElement("li");
       li.className = "fiche" + (m.accord ? "" : " sans-accord");
       li.innerHTML =
-        '<span class="avatar" aria-hidden="true"></span>' +
+        (m.photo ? '<img class="avatar" alt="" loading="lazy">' : '<span class="avatar" aria-hidden="true"></span>') +
         '<span class="fiche-txt"><strong></strong><span></span></span>';
-      li.querySelector(".avatar").textContent = initiales;
+      if (m.photo) { li.querySelector(".avatar").src = m.photo; } else { li.querySelector(".avatar").textContent = initiales; }
       li.querySelector("strong").textContent = m.nom;
       li.querySelector(".fiche-txt span").textContent = m.activite;
       if (m.linkedin) {
