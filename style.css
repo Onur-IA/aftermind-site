@@ -577,3 +577,29 @@ h3, .slide-body h3, .book h4 { font-family: "Inter", system-ui, sans-serif; font
 /* Liens vers le site d'Onur */
 .foot a, .host-sign a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
 .foot a:hover, .host-sign a:hover { color: var(--accent); }
+
+/* ===== Page « Nos tables » ===== */
+.tables-head { padding: 72px 0 24px; border-top: 0; }
+.tables-head h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); max-width: 18ch; }
+.tables-head .lead { margin-top: 16px; }
+.tables-wall { padding: 24px 0 96px; }
+.tables-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 32px; }
+.table-print { margin: 0; padding: 12px 12px 18px; background: #FFFDF8; border-radius: 6px; box-shadow: 0 24px 50px -28px rgba(20, 48, 42, .5), 0 2px 6px rgba(20, 48, 42, .08); transform: rotate(var(--r, 0deg)); transition: transform .4s ease, box-shadow .4s ease; }
+.table-print:hover { transform: rotate(0deg) translateY(-6px) scale(1.02); box-shadow: 0 30px 60px -28px rgba(20, 48, 42, .6); z-index: 2; position: relative; }
+.table-print img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 3px; display: block; }
+.table-print figcaption { padding: 12px 4px 0; display: grid; gap: 2px; }
+.table-print strong { font: 600 1rem "Inter", sans-serif; color: var(--ink); }
+.table-print span { font-size: 0.82rem; color: var(--accent); font-weight: 600; }
+.table-print em { font: italic 400 0.98rem "Fraunces", serif; color: var(--ink-soft); }
+.table-next-inner { aspect-ratio: 4 / 3; border-radius: 3px; display: grid; place-content: center; justify-items: center; gap: 8px; text-align: center; background: radial-gradient(circle at 50% 40%, #1f4a40, var(--ink)); color: var(--bg); }
+.table-next-inner .clover { width: 48px; height: 48px; color: var(--gold-light); }
+.table-next-inner strong { color: var(--bg); font: 600 1.3rem "Fraunces", serif; }
+.table-next-inner span { color: rgba(244, 239, 228, .8); font-weight: 400; }
+.places-title a { color: var(--bg); text-decoration: underline; text-decoration-color: var(--gold-light); text-underline-offset: 3px; text-transform: none; letter-spacing: 0; font-weight: 500; }
+.reel-more { margin-top: 20px; }
+.btn-tables { display: inline-block; padding: 12px 20px; border-radius: 999px; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: transform .2s ease; }
+.btn-tables:hover { transform: translateY(-2px); }
+@media (max-width: 900px) { .tables-grid { grid-template-columns: 1fr 1fr; gap: 32px 20px; } }
+@media (max-width: 640px) { .tables-grid { grid-template-columns: 1fr; } .tables-head { padding: 48px 0 16px; } }
+.anim .table-print.reveal.is-in { transform: rotate(var(--r, 0deg)); transition: opacity .7s ease, transform .4s ease, box-shadow .4s ease; }
+.anim .table-print.reveal.is-in:hover { transform: rotate(0deg) translateY(-6px) scale(1.02); }
