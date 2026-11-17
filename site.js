@@ -167,3 +167,29 @@
   });
   appliquer();
 })();
+
+// Diaporama des soirées.
+(function () {
+  var reel = document.getElementById("reel");
+  if (!reel) return;
+  document.querySelectorAll(".reel-btn").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var w = reel.querySelector(".reel-item").getBoundingClientRect().width + 20;
+      reel.scrollBy({ left: w * +b.dataset.dir, behavior: "smooth" });
+    });
+  });
+})();
+
+// Sécurité : révéler au défilement même si l'observateur ne se déclenche pas.
+(function () {
+  function verifier() {
+    var h = window.innerHeight;
+    document.querySelectorAll(".reveal:not(.is-in)").forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < h * 0.95 && r.bottom > 0) el.classList.add("is-in");
+    });
+  }
+  window.addEventListener("scroll", function () { requestAnimationFrame(verifier); }, { passive: true });
+  window.addEventListener("load", verifier);
+  setTimeout(verifier, 300);
+})();

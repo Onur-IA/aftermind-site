@@ -505,3 +505,53 @@ h3, .slide-body h3, .book h4 { font-family: "Inter", system-ui, sans-serif; font
 .chip.on, .chip:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .fiche.hide { display: none; }
 .fiches-count { font-size: 0.85rem; color: var(--ink-soft); margin: 12px 0 0; }
+
+/* ===== Version 6 ===== */
+/* Ouverture chaleureuse : texte + deux tirages photo */
+.hero-v6 { padding: 64px 0 72px; overflow: hidden; }
+.hero-v6-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; }
+.hero-v6-grid > * { min-width: 0; }
+.hero-v6 h1 { font-size: clamp(2.4rem, 4.6vw, 3.9rem); max-width: 13ch; }
+.hero-v6 .lead { max-width: 38ch; }
+.motto { display: flex; align-items: center; gap: 10px; margin: 26px 0 0; font: italic 400 1.1rem "Fraunces", serif; color: var(--accent); }
+.motto .clover { width: 22px; height: 22px; }
+.hero-v6-photos { position: relative; height: 460px; }
+.print { position: absolute; margin: 0; padding: 10px 10px 34px; background: #FFFDF8; border-radius: 6px; box-shadow: 0 24px 50px -24px rgba(20, 48, 42, .45), 0 2px 6px rgba(20, 48, 42, .08); transition: transform .5s ease; }
+.print img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 3px; }
+.print figcaption { position: absolute; left: 0; right: 0; bottom: 8px; text-align: center; font: italic 400 0.9rem "Fraunces", serif; color: var(--ink-soft); }
+.print-back { width: 62%; right: 0; top: 0; transform: rotate(5deg); }
+.print-front { width: 78%; left: 0; bottom: 0; transform: rotate(-3deg); }
+.hero-v6-photos:hover .print-front { transform: rotate(-1deg) translateY(-6px); }
+.hero-v6-photos:hover .print-back { transform: rotate(7deg) translateX(8px); }
+@media (max-width: 900px) {
+  .hero-v6-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-v6-photos { height: auto; aspect-ratio: 4 / 3.4; max-width: 520px; width: 100%; margin: 0 auto; }
+}
+@media (max-width: 640px) { .hero-v6 { padding: 40px 0 56px; } }
+
+/* Diaporama des soirées */
+.reel { display: grid; grid-auto-flow: column; grid-auto-columns: min(62vw, 760px); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 8px max(24px, calc((100vw - 1120px) / 2 + 24px)) 12px; scroll-padding: 0 max(24px, calc((100vw - 1120px) / 2 + 24px)); scrollbar-width: none; }
+.reel::-webkit-scrollbar { display: none; }
+.reel-item { margin: 0; scroll-snap-align: start; position: relative; border-radius: 18px; overflow: hidden; background: var(--line); }
+.reel-item img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; transition: transform .8s ease; }
+.reel-item:hover img { transform: scale(1.03); }
+.reel-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 20px 16px; background: linear-gradient(transparent, rgba(10, 26, 22, .75)); color: #FBF8F1; font: italic 400 1.05rem "Fraunces", serif; }
+@media (max-width: 640px) { .reel { grid-auto-columns: 86vw; padding: 8px 16px 12px; scroll-padding: 0 16px; } }
+
+/* Témoignages : deux en vedette, les autres défilent */
+.quotes-v6 { grid-template-columns: 1fr 1fr; gap: 28px; }
+.quotes-v6 .q-big { grid-column: auto; padding: 8px 0 8px 28px; }
+.quotes-v6 .q-big p { font-size: clamp(1.3rem, 2.4vw, 1.75rem); max-width: none; }
+.q-marquee { margin-top: 48px; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.q-track { display: flex; gap: 18px; width: max-content; animation: marquee 70s linear infinite; }
+.q-marquee:hover .q-track { animation-play-state: paused; }
+.q-track blockquote { width: 340px; flex: none; margin: 0; padding: 22px; border-radius: var(--radius); background: rgba(244, 239, 228, .06); border: 1px solid rgba(244, 239, 228, .12); display: flex; flex-direction: column; gap: 14px; }
+.q-track blockquote p { flex: 1; margin: 0; font: 400 1.05rem/1.45 "Fraunces", serif; color: var(--bg); }
+@media (max-width: 900px) { .quotes-v6 { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .q-track { animation: none; flex-wrap: wrap; width: auto; } .q-track [aria-hidden] { display: none; } }
+
+/* Devise */
+.motto-big { font: italic 400 clamp(1.4rem, 3vw, 2rem) "Fraunces", serif; color: var(--gold-light); margin: 0 0 18px; }
+.q-track footer { display: flex; align-items: center; gap: 12px; }
+.q-track footer strong { display: block; font-size: 0.95rem; color: var(--bg); }
+.q-track footer cite { display: block; font-style: normal; font-size: 0.8rem; color: var(--gold-light); }
