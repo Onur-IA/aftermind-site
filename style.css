@@ -555,3 +555,25 @@ h3, .slide-body h3, .book h4 { font-family: "Inter", system-ui, sans-serif; font
 .q-track footer { display: flex; align-items: center; gap: 12px; }
 .q-track footer strong { display: block; font-size: 0.95rem; color: var(--bg); }
 .q-track footer cite { display: block; font-style: normal; font-size: 0.8rem; color: var(--gold-light); }
+
+/* ===== Version 7 ===== */
+/* Histoire : cartes de même hauteur, photos au même format */
+.story { align-items: stretch; }
+.slide-media { position: relative; height: 200px; aspect-ratio: auto; overflow: hidden; }
+.slide-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.slide-body { flex: 1; }
+.slide-body h3 { min-height: 2.6em; display: flex; align-items: flex-end; }
+
+/* La chance */
+.motto { align-items: flex-start; line-height: 1.4; max-width: 40ch; }
+.motto .clover { margin-top: 3px; }
+.motto em { display: block; font-style: normal; font-family: "Inter", sans-serif; font-size: 0.95rem; color: var(--ink-soft); margin-top: 4px; }
+.motto-big span { display: block; font-size: 0.6em; color: rgba(244, 239, 228, .75); margin-top: 6px; }
+
+/* Témoignages : deuxième ligne en sens inverse */
+.q-marquee + .q-marquee { margin-top: 18px; }
+.q-reverse .q-track { animation-direction: reverse; animation-duration: 80s; }
+
+/* Liens vers le site d'Onur */
+.foot a, .host-sign a { color: inherit; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+.foot a:hover, .host-sign a:hover { color: var(--accent); }
