@@ -465,3 +465,4 @@ img.avatar { object-fit: cover; padding: 0; }
 .tool .btn-cal { align-self: flex-start; margin-top: auto; }
 .tool-note { font-size: 0.85rem; }
 @media (max-width: 900px) { .tools { grid-template-columns: 1fr; } }
+.host-photo { object-position: center; }
